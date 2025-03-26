@@ -134,10 +134,14 @@ header {
       text-decoration: underline;
     }
   }
+   
+  li:first-child {
+    margin-top: 35px;
+  }
 
   .desplegat__tancar {
-    justify-self: right;
-    padding-right: 15px;
+    position: absolute;
+    right: 15px;
     font-size: 1.5rem;
     color: $background;
     cursor: pointer;
@@ -320,7 +324,7 @@ h4 {
   justify-self: center;
   width: 290px;
   height: 290px;
-  background-image: url(../images/mapa.png);
+  background-image: url(../images/mapa.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -339,7 +343,7 @@ h4 {
 }
 
 .section2__img2:hover{
-  background-image: url(../images/mapa2.png);
+  background-image: url(../images/mapa2.jpg);
   transform: scale(1.1);
 }
 
@@ -348,7 +352,7 @@ h4 {
   justify-self: center;
   width: 290px;
   height: 290px;
-  background-image: url(../images/kanelbulle3.png);
+  background-image: url(../images/kanelbulle3.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -374,7 +378,7 @@ h4 {
   visibility: hidden;
   align-self: center;
   justify-self: center;
-  background-image: url(../images/kanelbulle3.png);
+  background-image: url(../images/kanelbulle3.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -460,7 +464,7 @@ h4 {
     }
 
     @include functions.breakpoint(small) {
-      width: 310px;
+      width: 65vw;
     }  
   }
 
