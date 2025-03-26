@@ -1,6 +1,6 @@
 {
   "name": "Pac1",
-  "version": "3.11.0",
+  "version": "1.1",
   "private": true,
   "description": "PAC1-Eines HTML i CSS II",
   "scripts": {
@@ -24,17 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
+    "url": "https://github.com/mpreibsch/PAC1_EinesHTML_CSS_II"
   },
   "author": {
     "name": "Maria Preibsch Vidal",
     "email": "mpreibsch@uoc.edu"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues"
-  },
-  "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
+  "homepage": "https://github.com/mpreibsch/PAC1_EinesHTML_CSS_II",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
     "autoprefixer": "^10.4.20",

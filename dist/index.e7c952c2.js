@@ -1,0 +1,1 @@
+const e=document.querySelector(".menu__obrir"),t=document.querySelector(".desplegat__tancar"),c=document.querySelector(".desplegat");e.addEventListener("click",function(){c.classList.add("visible")}),t.addEventListener("click",function(){c.classList.remove("visible")});
