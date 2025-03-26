@@ -1,0 +1,14 @@
+@function get-breakpoint($breakpoint) {
+    @if $breakpoint == small {
+        @return 768px;
+    }
+    @else if $breakpoint == medium {
+        @return 992px;
+    }
+}
+
+@mixin breakpoint($breakpoint) {
+    @media(max-width: get-breakpoint($breakpoint)) {
+        @content;
+    }
+}

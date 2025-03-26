@@ -1,0 +1,471 @@
+*,
+*:before,
+*:after {
+  padding:0;
+  margin:0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  font-family: $font-family-sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: $principal;
+  text-align: center;
+  background-color: $background;
+  
+  @include functions.breakpoint(medium) {
+    font-size: 1.2rem;
+  }
+
+  @include functions.breakpoint(small) {
+    font-size: 1rem;
+  }
+}
+
+header {
+  position: relative;
+  width: 100vw;
+  background-color: $background-secondary;
+ 
+  img {
+    width: 120px;
+    margin-top: 30px;
+
+    @include functions.breakpoint(medium) {
+      width: 90px;
+    }
+
+    @include functions.breakpoint(small) {
+      width: 70px;
+    }
+  }
+}
+
+  .menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      gap: 200px;
+      justify-content: center;
+
+      @include functions.breakpoint(medium) {
+        display: none;
+      }
+      
+      li{
+        font-size: 1.6rem;
+        list-style: none;
+      }
+  }
+
+  .menu__obrir {
+    position: absolute;
+    right: 20px;
+    display: none;
+    padding-bottom: 30px;
+    margin-left: auto;
+    font-size: 1.5rem; 
+    color: $principal;
+    cursor: pointer;
+
+    @include functions.breakpoint(medium) {
+      display: block;   
+  }
+}
+
+  .menu__obrir:hover {
+    color: $background;
+  }
+
+  a {
+    color: $principal;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $secondary;
+  }
+}
+
+.desplegat {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  visibility: hidden;
+  width: 180px;
+  background-color: $principal;
+  border-radius: 10px;
+
+  @include functions.breakpoint(small) {
+    width: 130px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0.6rem;
+    font-size: 1.4rem;
+    list-style: none;
+
+    @include functions.breakpoint(small) {
+      font-size: 1.1rem;
+    }
+
+    a {
+      color: $background;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .desplegat__tancar {
+    justify-self: right;
+    padding-right: 15px;
+    font-size: 1.5rem;
+    color: $background;
+    cursor: pointer;
+
+    @include functions.breakpoint(small) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include functions.breakpoint(medium) {
+  .desplegat.visible {
+    visibility: visible;
+  }
+}
+
+footer {
+  width: 100vw;
+  background-color: $background-secondary;
+
+  p {
+    padding: 80px 0;
+    font-size: 0.8rem;
+
+    @include functions.breakpoint(small) {
+      padding: 50px 0;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+h1 {
+  align-self: center;
+  width: 70%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 2.8rem;
+  text-align: center;
+  
+
+  @include functions.breakpoint(medium) {
+    font-size: 2.2rem;
+  }
+
+  @include functions.breakpoint(small) {
+    width: 85vw;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+  }
+}
+
+h2 {
+  justify-self: center;
+  width: 80vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  text-align: center;
+
+  @include functions.breakpoint(medium) {
+    font-size: 2rem;
+  }
+
+  @include functions.breakpoint(small) {
+    width: 90vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+  }
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 80px;
+  text-align: left;
+}
+
+.section1 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  width: 90vw;
+  margin-bottom: 70px;
+  
+  @include functions.breakpoint(small) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section1__img1 {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 265px;
+    height: auto;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  
+    @include functions.breakpoint(medium) {
+      width: 200px;
+    }
+  
+    @include functions.breakpoint(small) {
+      width: 260px;
+      margin-bottom: 25px;
+      clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    }
+  }
+  
+  .section1__img1:hover {
+    clip-path: circle(50% at 50% 50%);
+    transform: scale(1.1); 
+  }   
+  
+  p {
+    margin-top: 0;
+    text-align: justify;
+  }
+}
+
+.section2 {
+  align-items: center;
+  width: 90vw;
+  margin-bottom: 70px;
+
+  p {
+    text-align: justify;
+  }
+
+  span {
+    color: $background-secondary;
+  }
+
+  .section2__p1 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+  @include functions.breakpoint(small) {
+    display: flex;
+    flex-direction: column;
+  }
+
+    p {
+      margin-right: 40px;
+
+      @include functions.breakpoint(small) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .section2__p2 {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 30px;
+
+    
+  @include functions.breakpoint(small) {
+    display: flex;
+    flex-direction: column;
+  }
+
+    p {
+      margin-left: 40px;
+      
+      @include functions.breakpoint(small) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.section2__img2 {
+  align-self: center;
+  justify-self: center;
+  width: 290px;
+  height: 290px;
+  background-image: url(../images/mapa.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px; 
+  
+  @include functions.breakpoint(medium) {
+    width: 240px;
+    height: 240px;
+  }
+
+  @include functions.breakpoint(small) {
+    width: 280px;
+    height: 280px;
+    margin-top: 30px;
+  }
+}
+
+.section2__img2:hover{
+  background-image: url(../images/mapa2.png);
+  transform: scale(1.1);
+}
+
+.section2__img3 {
+  align-self: center;
+  justify-self: center;
+  width: 290px;
+  height: 290px;
+  background-image: url(../images/kanelbulle3.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+  
+  @include functions.breakpoint(medium) {
+    width: 240px;
+    height: 240px;
+  }
+
+  @include functions.breakpoint(small) {
+    display: none;
+  }
+}
+
+.section2__img3:hover {
+  clip-path: circle(50% at 50% 50%);
+  transform: rotate(360deg);
+  transition: 1s, ease-in-out;  
+}
+
+.section2__img3m {
+  visibility: hidden;
+  align-self: center;
+  justify-self: center;
+  background-image: url(../images/kanelbulle3.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+  
+  @include functions.breakpoint(small) {
+    visibility: visible;
+    width: 280px;
+    height: 280px;
+    margin-top: 30px;  
+  }
+}
+
+.section2__img3m:hover {
+  clip-path: circle(50% at 50% 50%);
+  transform: rotate(360deg);
+  transition: 1s, ease-in-out; 
+}
+
+.section3 {
+  width: 60vw;
+  height: auto;
+  padding-bottom: 60px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  background-color: $background-secondary;
+  border-radius: 15px;
+  box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.2);
+
+  @include functions.breakpoint(medium) {
+    width: 70vw;
+  }
+
+  @include functions.breakpoint(small) {
+    width: 80vw;
+  }
+
+  .section3__img5 {
+    float: left;
+
+    @include functions.breakpoint(medium) {
+      width: 180px;
+    }
+
+    @include functions.breakpoint(small) {
+      width: 150px;
+    }  
+  }
+
+  h2 {
+    clear: left;
+  }
+  
+  span {
+    color: $background;
+  }
+
+  li {
+    margin-right: 50px;
+    margin-left: 80px;
+    text-align: left;
+
+    @include functions.breakpoint(small) {
+      margin-right: 40px;
+      margin-left: 40px;
+    }  
+  }
+
+  ol li {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .section3__img4 {
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+
+    @include functions.breakpoint(medium) {
+      width: 350px;
+    }
+
+    @include functions.breakpoint(small) {
+      width: 310px;
+    }  
+  }
+
+  .section3__img4:hover {
+    transform: scale(1.1);
+  }
+}
+
