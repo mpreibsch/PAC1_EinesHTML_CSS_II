@@ -3,7 +3,7 @@
         @return 768px;
     }
     @else if $breakpoint == medium {
-        @return 992px;
+        @return 1024px;
     }
 }
 
